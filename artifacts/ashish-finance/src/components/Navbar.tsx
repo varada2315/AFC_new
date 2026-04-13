@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
-import logoPath from "@assets/file_000000001d647208947e624e945949d3_-_Ashish_Urkude_1776118758268.png";
+import logoPath from "@assets/file_000000001d647208947e624e945949d3_-_Ashish_Urkude-removebg_1776119654591.png";
 import { cn } from "@/lib/utils";
 
 const links = [
@@ -39,7 +39,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 z-50 relative group">
-          <img src={logoPath} alt="Ashish Finance Services Logo" className="h-10 w-auto rounded object-contain transition-transform group-hover:scale-105" />
+          <img src={logoPath} alt="Ashish Finance Services Logo" className="h-12 w-auto object-contain transition-transform group-hover:scale-105" style={{ mixBlendMode: "screen" }} />
           <div className="flex flex-col">
             <span className="font-serif text-primary text-xl leading-tight tracking-wide">ASHISH</span>
             <span className="font-sans text-white text-[0.65rem] tracking-[0.2em] font-medium leading-tight">FINANCE SERVICES</span>
