@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Ashish Finance Services"
+version = "1.0.0"
+id = "artifacts/ashish-finance"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18982
+
+[services.development]
+run = "pnpm --filter @workspace/ashish-finance run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ashish-finance", "run", "build" ]
+publicDir = "artifacts/ashish-finance/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18982"
+BASE_PATH = "/"

@@ -1,0 +1,32 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "yG-tUzteq1aK7JcWtv2P3"
+uri = "file://artifacts/ashish-finance/src/assets/ashish-hero.png"
+type = "image"
+title = "Ashish Hero Portrait"
+
+[[generated]]
+id = "HhKhHe6Q4Pnm8OdRlDCYL"
+uri = "file://artifacts/ashish-finance/src/assets/growth-photo.png"
+type = "image"
+title = "Growth Concept Photo"
+
+[[generated]]
+id = "HoD6vAOeYInMqq_mwWTW9"
+uri = "file://artifacts/ashish-finance/src/assets/visit-1.png"
+type = "image"
+title = "Client Visit 1"
+
+[[generated]]
+id = "ClWdVvZZ0woFeprd-MRWL"
+uri = "file://artifacts/ashish-finance/src/assets/visit-2.png"
+type = "image"
+title = "Client Visit 2"
+
+[[generated]]
+id = "eG1KMmJBJwzlM8AOe2nwu"
+uri = "file://artifacts/ashish-finance/src/assets/visit-3.png"
+type = "image"
+title = "Client Visit 3"

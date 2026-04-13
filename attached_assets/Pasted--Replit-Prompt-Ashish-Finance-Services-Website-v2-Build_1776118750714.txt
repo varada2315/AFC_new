@@ -1,0 +1,533 @@
+# 🏦 Replit Prompt: Ashish Finance Services Website (v2)
+
+Build a **premium 5-page financial services website** for **Ashish Finance Services** by Mr. Ashish Vilas Urkude.  
+The home page must **exactly match** the reference design image provided. All other pages follow the same color system and design language.
+
+---
+
+## TECH STACK
+
+- **HTML5 + CSS3 + Vanilla JavaScript** — no frameworks
+- Separate HTML files per page, shared `style.css` and `script.js`
+- Google Fonts
+- Fully mobile responsive
+- No backend — static site only
+
+---
+
+## DESIGN SYSTEM
+
+### Color Palette (exact from reference image)
+```css
+--navy:         #0D1B2A   /* dark navy background for hero + dark sections */
+--gold:         #C9A84C   /* primary gold for headings, icons, borders */
+--gold-light:   #E8C96D
+--white:        #FFFFFF
+--off-white:    #F5F5F0   /* light section backgrounds */
+--green-cta:    #2E7D32   /* WhatsApp / CTA buttons */
+--green-light:  #43A047
+--text-dark:    #1A1A1A
+--text-muted:   #555555
+--gold-gradient: linear-gradient(135deg, #C9A84C, #E8C96D)
+```
+
+### Typography
+- **Logo / Brand Name**: `Cinzel` or `Playfair Display` — serif, gold
+- **Headings**: `Montserrat` Bold — uppercase for section titles
+- **Body**: `DM Sans` — clean and readable
+- **Marathi text**: `Noto Sans Devanagari`
+- Load all from Google Fonts
+
+---
+
+## SHARED NAVBAR (All Pages)
+
+```
+[LOGO - logo.png]  ASHISH  FINANCE SERVICES   |  Home  About  Services  Contact
+```
+
+- **Background**: Deep navy `#0D1B2A`
+- **"ASHISH"**: Gold color, bold
+- **"FINANCE SERVICES"**: White, lighter weight
+- Nav links: White, hover turns gold
+- Active page: Gold underline
+- On scroll: Navbar stays sticky, adds subtle gold bottom border
+- **Mobile**: Hamburger menu (gold icon), dropdown slides down with navy background
+
+---
+
+## PAGE 1: HOME (`index.html`)
+
+### ── SECTION 1: HERO ──
+
+**Layout**: Full-width dark navy (`#0D1B2A`) section, two columns:
+
+**Left column (~55% width):**
+- Top-left floating element: 
+  ```
+  WHATSAPP
+  BUTTON
+  [WhatsApp green circle icon]
+  ```
+  Small label text above a circular WhatsApp icon badge (green `#25D366`)
+
+- Main content block:
+  - `MR. ASHISH VILAS URKUDE` — white, bold, large ~32px
+  - `STOCK MARKET AUTHORISED PERSON` — gold color, bold, ~18px, uppercase
+  - `6+ YEAR EXPERIENCE IN STOCK MARKET` — white, medium weight, ~16px
+  - Green CTA button (pill shaped, full-width on mobile):
+    ```
+    [WhatsApp icon]  CLICK HERE TO START INVESTMENT
+    ```
+    Background: `#2E7D32`, text white, bold, border-radius: 50px, padding: 14px 28px
+
+**Right column (~45% width):**
+- Professional photo of Ashish in a suit (placeholder: `ashish-hero.jpg`)
+- Photo positioned to bleed to right edge, slightly overlapping into next section
+- No border/frame — natural photo blend into dark background
+
+---
+
+### ── SECTION 2: MY INTRO VIDEO ──
+
+**Background**: Off-white `#F5F5F0`
+
+**Section title bar** (centered):
+```
+────────  ▶ MY INTRO VIDEO  ────────
+```
+- Dark navy pill/badge with play icon + text in white
+- Gold horizontal lines on both sides of the badge
+
+**Video block:**
+- Large centered video embed container (YouTube iframe)
+- Placeholder: `YOUR_YOUTUBE_VIDEO_ID`
+- Ratio: 16:9, max-width: 750px, centered
+- Dark border / slight shadow
+- Play button overlay icon centered (circle with triangle) if using thumbnail before play
+
+---
+
+### ── SECTION 3: INTRODUCTION / INFORMATION ──
+
+**Background**: Off-white `#F5F5F0`
+
+**Section title** (centered):
+```
+────────  👤 INTRODUCTION / INFORMATION  ────────
+```
+Gold person icon, navy text, gold divider lines
+
+**3-column layout:**
+
+| Column 1 (left ~35%) | Column 2 (center ~30%) | Column 3 (right ~35%) |
+|---|---|---|
+| Marathi welcome text | Service icon list | Growth photo |
+
+**Column 1 — Text:**
+```
+Ashish Finance Services मध्ये आपले स्वागत आहे.
+आम्ही तुम्हाला योग्य मार्गदर्शन करून तुमचे
+आर्थिक ध्येय पूर्ण करण्यात मदत करतो.
+```
+- Bold `Ashish` in gold, rest in dark text
+- Font: Noto Sans Devanagari for Marathi, DM Sans for English
+
+**Column 2 — Services icon list:**
+Each item: colored circular icon + service name
+```
+🔵  Mutual Fund Investment
+🔵  SIP Planning
+🟢  Stock Market Guidance
+🟣  Insurance Services
+```
+- Use colored SVG/emoji icons in circles matching the reference (teal, blue, green, purple)
+- Text: dark, medium weight
+
+**Column 3 — Image:**
+- Photo of a jar with coins and growing plant (placeholder: `growth-photo.jpg`)
+- Rounded corners (border-radius: 12px)
+- Slight gold border
+
+---
+
+### ── SECTION 4: VISITING / PHOTO + STATS ──
+
+**Background**: Dark navy `#0D1B2A`
+
+**Left side (~65% width):**
+
+Section title (centered over photo grid):
+```
+────────  📷 VISITING / PHOTO  ────────
+```
+Gold camera icon, white text, gold lines
+
+Photo grid — 3 photos side by side:
+```
+[ photo 1 ]  [ photo 2 ]  [ photo 3 ]
+```
+- Placeholders: `visit-1.jpg`, `visit-2.jpg`, `visit-3.jpg`
+- Each has rounded corners (border-radius: 10px)
+- Slight gold border on hover
+
+**Right side (~35% width)** — Stats cards, stacked vertically:
+
+**Card 1:**
+```
+👥  1000+
+    HAPPY CUSTOMERS
+```
+- Gold people icon, gold number `1000+` large and bold
+- White label text
+- Dark card background with gold border circle around icon
+
+**Card 2:**
+```
+₹   500+
+    SIP INVESTORS
+```
+- Gold rupee symbol in circle, gold number, white label
+
+Both cards: dark background, centered content, gold circular icon badge
+
+---
+
+### ── SECTION 5: SOCIAL MEDIA + CONTACT ──
+
+**Background**: Off-white `#F5F5F0`
+
+**Two-column layout** with a vertical divider line in center:
+
+**Left half — SOCIAL MEDIA:**
+
+Section title: `── SOCIAL MEDIA ──` (centered, dark, uppercase)
+
+Two colored social media cards side by side:
+
+```
+┌─────────────────────┐  ┌─────────────────────┐
+│  [Instagram gradient]│  │  [Facebook blue]     │
+│  📷 INSTAGRAM        │  │  f  FACEBOOK         │
+│  Follow for daily   │  │  Follow for daily    │
+│  investment tips    │  │  investment tips     │
+└─────────────────────┘  └─────────────────────┘
+```
+- Instagram card: gradient background (purple → orange, matching Instagram brand)
+- Facebook card: Facebook blue `#1877F2`
+- White text + icons
+- Rounded corners, full clickable cards
+- Both open in new tab
+
+**Right half — CONTACT:**
+
+Section title: `── CONTACT ──` (centered, dark, uppercase)
+
+List with gold icons:
+```
+📍  Virar, Maharashtra
+📞  9876543210
+✉️  info@ashishfinanceservices.com
+```
+- Each line: gold colored map/phone/email icon + text
+- Text: dark, DM Sans
+
+---
+
+### ── SECTION 6: FOOTER DISCLAIMER BAR ──
+
+**Background**: Dark navy `#0D1B2A`
+
+**Left side:**
+```
+[Gold shield/check icon]
+IMPORTANT : INVESTMENT SUBJECT TO MARKET RISK.
+SEBI REG NO: INH000012345  |  BROKER CODE: ABC1234
+```
+- Small text, white, italic for disclaimer
+- Gold shield icon on left
+
+**Right side:**
+```
+[ FREE CONSULTATION ]
+  साठी आजच संपर्क करा
+```
+- Green CTA button (`#2E7D32`), white bold text
+- Marathi subtitle below button text
+
+---
+
+### ── SECTION 7: COPYRIGHT BAR ──
+
+**Background**: Very dark / black `#0A0A0A`
+
+```
+© 2024 Ashish Finance Services. All Rights Reserved.
+```
+Centered, small white text
+
+---
+
+## PAGE 2: ABOUT (`about.html`)
+
+Same navbar. Hero banner: navy background.
+
+### Sections:
+1. **Hero title**: `About Us | आमच्याबद्दल` — gold underline
+2. **Brand Story** — 2 col: Ashish photo left, story text right
+   - Story: *"Ashish Finance Service was started with the aim of helping people understand and grow their money through smart investment strategies..."*
+   - Marathi version below
+3. **Mission card** (navy bg, gold border):
+   - *"Our mission is to provide simple and trusted financial guidance..."*
+   - Marathi: `"सोप्या आणि विश्वासार्ह मार्गदर्शनाद्वारे लोकांची संपत्ती वाढवणे हे आमचे ध्येय आहे."`
+4. **Vision card** (navy bg, gold border):
+   - *"Our vision is to become a trusted name in financial services..."*
+   - Marathi: `"आर्थिक सेवांमध्ये एक विश्वासार्ह नाव बनणे आणि जास्तीत जास्त लोकांना आर्थिक स्वातंत्र्य मिळवण्यास मदत करणे."`
+5. **Why Choose Us** — 4 icon cards:
+   - 🎯 Personalized Guidance | वैयक्तिक मार्गदर्शन
+   - 📈 Long-Term Wealth | दीर्घकालीन संपत्ती
+   - 🤝 Trusted & Transparent | विश्वासार्ह
+   - 📚 Simple Strategies | सोपे धोरण
+6. **Credentials strip**: NISM badge, Angel One badge
+
+---
+
+## PAGE 3: SERVICES (`services.html`)
+
+### Sections:
+1. **Hero title**: `Our Services | आमच्या सेवा`
+2. **7 Service Cards** in responsive grid (3 cols desktop, 2 tablet, 1 mobile):
+
+Each card — navy bg, gold top border, gold icon:
+
+| # | English | Marathi | Icon |
+|---|---------|---------|------|
+| 1 | Stock Market Investment Guidance | शेअर बाजार गुंतवणूक मार्गदर्शन | 📈 |
+| 2 | Mutual Fund Investment | म्युच्युअल फंड गुंतवणूक | 💼 |
+| 3 | F&O Trading Support | F&O ट्रेडिंग सपोर्ट | 🔄 |
+| 4 | Demat Account Opening (Angel One) | डिमॅट खाते उघडणे | 🏦 |
+| 5 | Portfolio Management Guidance | पोर्टफोलिओ व्यवस्थापन | 📊 |
+| 6 | Financial Planning | आर्थिक नियोजन | 🗓️ |
+| 7 | Beginner Investment Training | नवीन गुंतवणूकदारांसाठी प्रशिक्षण | 🎓 |
+
+Card structure:
+```
+[Gold icon in circle]
+Service Name (English, bold)
+सेवेचे नाव (Marathi, smaller)
+Short 1-line description
+[ Enquire Now → ]  (gold outline button)
+```
+
+3. **CTA Banner**: Gold gradient background
+   - Text: `"Start Your Investment Journey Today | आजच सुरुवात करा"`
+   - Green button: `Contact Us`
+
+---
+
+## PAGE 4: LICENSE (`license.html`)
+
+> Accessible from footer link "License" and from contact strip on home page.
+
+### Sections:
+1. **Hero title**: `Licenses & Certifications | परवाने आणि प्रमाणपत्रे`
+   - Subtitle: *"Our credentials that make us a trusted financial advisor"*
+   - Marathi: `"आमची विश्वासार्हता सिद्ध करणारी प्रमाणपत्रे"`
+
+2. **License Cards Grid** (2 cols desktop, 1 col mobile):
+
+Each card:
+```
+┌──────────────────────────────────────────┐
+│  [Certificate scan image]                │
+│  ──────────────────────────────────────  │
+│  ✔ VERIFIED  (gold badge top-right)      │
+│  Certificate Name                        │
+│  प्रमाणपत्र नाव                          │
+│  Issuing Authority: [name]               │
+│  Certificate No: [placeholder]           │
+│  Valid Until: [date]                     │
+│  [ 🔍 View Certificate ] (gold button)   │
+└──────────────────────────────────────────┘
+```
+
+**Pre-filled certificate cards (client replaces details):**
+1. NISM Series VIII — Equity Derivatives | NISM | `cert-1.jpg`
+2. NISM Series V-A — Mutual Fund Distributors | NISM | `cert-2.jpg`
+3. Angel One Authorised Person Certificate | Angel One | `cert-3.jpg`
+4. SEBI Registration Certificate | SEBI | `cert-4.jpg`
+
+3. **Lightbox Modal**: Clicking "View Certificate" opens full-screen overlay:
+   - Black overlay background (80% opacity)
+   - Certificate image centered, max 90% viewport
+   - Gold border around image
+   - `✕` close button top-right (white)
+
+4. **Disclaimer note** at bottom (small italic):
+   > *"All licenses are regularly renewed and compliant with SEBI regulations."*
+   > `"सर्व परवाने नियमितपणे नूतनीकरण केले जातात आणि SEBI नियमांचे पालन केले जाते."`
+
+---
+
+## PAGE 5: CONTACT (`contact.html`)
+
+### Sections:
+1. **Hero title**: `Contact Us | आमच्याशी संपर्क करा`
+
+2. **3 Contact Info Cards** (row):
+
+**Card 1 — Phone:**
+- Gold 📞 icon
+- `Call Us | फोन करा`
+- `+91 [PHONE NUMBER]`
+- Green button: `Call Now`
+
+**Card 2 — Email:**
+- Gold ✉️ icon
+- `Email Us | ईमेल करा`
+- `[EMAIL ADDRESS]`
+- Gold button: `Send Email`
+
+**Card 3 — WhatsApp:**
+- WhatsApp icon (green)
+- `WhatsApp | व्हॉट्सअ‍ॅप`
+- `+91 [PHONE NUMBER]`
+- Green button: `Chat on WhatsApp` → `https://wa.me/[PHONE]`
+
+3. **Contact Form** (navy card, gold borders):
+```
+Full Name — पूर्ण नाव            [_______________]
+Phone — मोबाइल नंबर             [_______________]
+Email — ईमेल                    [_______________]
+Service Interested In (dropdown) [_______________]
+  Options: Stock Market / Mutual Fund / F&O / 
+           Demat Account / Portfolio / Planning / Training
+Message — संदेश                  [_______________]
+
+                    [ Submit — पाठवा ]  (gold button)
+```
+On submit: toast notification — `"धन्यवाद! आम्ही लवकरच संपर्क करू."` (green toast, 3s)
+
+4. **Working Hours card**:
+```
+🕐 Mon – Sat: 9:00 AM – 7:00 PM
+   Sunday: By Appointment
+   सोमवार ते शनिवार: सकाळी ९ ते संध्याकाळी ७
+```
+
+---
+
+## LEGAL PAGES
+
+### `privacy-policy.html`
+- Navy hero banner: `Privacy Policy | गोपनीयता धोरण`
+- Sections: Data We Collect, How We Use It, Third Parties, Your Rights, Contact
+- Linked in footer
+
+### `terms.html`
+- Navy hero banner: `Terms & Conditions | नियम व अटी`
+- Sections: Services, Investment Disclaimer, Liability, Governing Law, Contact
+- Linked in footer
+
+---
+
+## FLOATING ELEMENTS (All Pages)
+
+### WhatsApp Floating Button
+- Fixed: `bottom: 24px; right: 24px`
+- Green circle (`#25D366`), WhatsApp icon white
+- Pulse animation (green glow ring, 2s infinite)
+- Tooltip on hover: `"Chat on WhatsApp"`
+- Link: `https://wa.me/[PHONE_NUMBER]`
+
+### Scroll-to-Top Button
+- Fixed: `bottom: 24px; left: 24px`
+- Gold circle, white arrow icon
+- Visible after 300px scroll
+- Smooth scroll to top on click
+
+---
+
+## ANIMATIONS & JS BEHAVIORS
+
+1. **Scroll fade-in**: `IntersectionObserver` — sections slide up + fade in when entering viewport
+2. **Counter animation**: `1000+` and `500+` count up with easing when stats section enters viewport
+3. **Navbar scroll**: Adds `box-shadow` and slight size reduction after 80px scroll
+4. **Lightbox**: Certificate image modal open/close with keyboard `Esc` support
+5. **Mobile menu**: Smooth slide-down animation
+6. **Hover on service cards**: `translateY(-6px)` + gold glow `box-shadow`
+7. **Hover on social cards**: Slight scale `1.03`
+
+---
+
+## FULL FILE STRUCTURE
+
+```
+ashish-finance-services/
+│
+├── index.html              ← Home Page
+├── about.html              ← About Page
+├── services.html           ← Services Page
+├── license.html            ← License Page
+├── contact.html            ← Contact Page
+├── privacy-policy.html     ← Legal
+├── terms.html              ← Legal
+│
+├── style.css               ← All shared styles
+├── script.js               ← Shared JS (navbar, scroll, counter, lightbox)
+│
+└── assets/
+    ├── logo.png                  ← Client logo (to be uploaded)
+    ├── ashish-hero.jpg           ← Hero photo of Ashish
+    ├── ashish-photo.jpg          ← About page photo
+    ├── growth-photo.jpg          ← Coins/plant image
+    ├── visit-1.jpg               ← Client visiting photos
+    ├── visit-2.jpg
+    ├── visit-3.jpg
+    └── certificates/
+        ├── cert-1.jpg            ← NISM certificate scans
+        ├── cert-2.jpg
+        ├── cert-3.jpg
+        └── cert-4.jpg
+```
+
+---
+
+## PLACEHOLDERS TO REPLACE (Client Fills In)
+
+| Placeholder | Replace With |
+|-------------|-------------|
+| `[PHONE NUMBER]` | Actual mobile number |
+| `[EMAIL ADDRESS]` | Actual email address |
+| `YOUR_YOUTUBE_VIDEO_ID` | YouTube video ID (from URL after `v=`) |
+| `SEBI REG NO: INH000012345` | Actual SEBI reg number |
+| `BROKER CODE: ABC1234` | Actual broker code |
+| `Certificate No: [PLACEHOLDER]` | Actual cert numbers |
+| Instagram URL | Actual Instagram profile link |
+| Facebook URL | Actual Facebook profile link |
+| `logo.png` | Client logo file |
+| `ashish-hero.jpg` | Hero section photo |
+| `cert-1.jpg` etc. | Scanned certificate images |
+
+---
+
+## MARATHI PHRASES REFERENCE
+
+| English | Marathi |
+|---------|---------|
+| Click Here to Start Investment | गुंतवणूक सुरू करण्यासाठी येथे क्लिक करा |
+| Happy Customers | आनंदी ग्राहक |
+| SIP Investors | SIP गुंतवणूकदार |
+| Follow for daily investment tips | दैनंदिन गुंतवणूक टिप्ससाठी फॉलो करा |
+| Free Consultation | मोफत सल्लामसलत |
+| Contact us today | आजच संपर्क करा |
+| Investment subject to market risk | गुंतवणूक बाजार जोखमीच्या अधीन आहे |
+| Our Services | आमच्या सेवा |
+| About Us | आमच्याबद्दल |
+| Certifications | प्रमाणपत्रे |
+| Thank you, we will contact you soon | धन्यवाद! आम्ही लवकरच संपर्क करू |
+
+---
+
+*Ashish Finance Services — Premium Financial Advisory Website*  
+*Theme: Navy & Gold | CTA: Green | Language: English + Marathi | 5 Pages + 2 Legal*
