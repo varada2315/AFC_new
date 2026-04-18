@@ -211,20 +211,62 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row gap-12 mt-12">
             
             {/* Left: Photos */}
-            <div className="flex-[2] grid grid-cols-1 md:grid-cols-3 gap-4">
-              {[visit1Path, visit2Path, visit3Path].map((img, i) => (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.15 }}
-                  className="aspect-video md:aspect-[3/4] relative rounded-xl overflow-hidden border border-white/10 hover:border-primary transition-colors duration-300 group"
+            <div className="flex-[2] w-full overflow-hidden">
+              {/* Desktop layout: standard CSS grid */}
+              <div className="hidden md:grid grid-cols-3 gap-4">
+                {[visit1Path, visit2Path, visit3Path].map((img, i) => (
+                  <motion.div 
+                    key={`desk-${i}`}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.15 }}
+                    className="aspect-[3/4] relative rounded-xl overflow-hidden border border-white/10 hover:border-primary transition-colors duration-300 group"
+                  >
+                    <div className="absolute inset-0 bg-[#0D1B2A]/20 group-hover:bg-transparent transition-colors z-10"></div>
+                    <img src={img} alt={`Office Visit ${i+1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Mobile layout: auto-sliding carousel (infinite marquee) */}
+              <div className="flex md:hidden w-full relative">
+                <motion.div
+                  className="flex"
+                  animate={{ x: ["0%", "-50%"] }}
+                  transition={{ 
+                    ease: "linear", 
+                    duration: 12, 
+                    repeat: Infinity 
+                  }}
+                  style={{ width: "max-content" }}
                 >
-                  <div className="absolute inset-0 bg-[#0D1B2A]/20 group-hover:bg-transparent transition-colors z-10"></div>
-                  <img src={img} alt={`Office Visit ${i+1}`} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  {/* Set 1 */}
+                  <div className="flex gap-4 pr-4">
+                    {[visit1Path, visit2Path, visit3Path].map((img, i) => (
+                      <div 
+                        key={`mob-1-${i}`}
+                        className="w-[80vw] sm:w-[60vw] aspect-video relative rounded-xl overflow-hidden border border-white/10"
+                      >
+                        <div className="absolute inset-0 bg-[#0D1B2A]/10 z-10 pointer-events-none"></div>
+                        <img src={img} alt={`Office Visit ${i+1}`} className="w-full h-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                  {/* Set 2 (Duplicate for seamless loop) */}
+                  <div className="flex gap-4 pr-4">
+                    {[visit1Path, visit2Path, visit3Path].map((img, i) => (
+                      <div 
+                        key={`mob-2-${i}`}
+                        className="w-[80vw] sm:w-[60vw] aspect-video relative rounded-xl overflow-hidden border border-white/10"
+                      >
+                        <div className="absolute inset-0 bg-[#0D1B2A]/10 z-10 pointer-events-none"></div>
+                        <img src={img} alt={`Office Visit ${i+1}`} className="w-full h-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
                 </motion.div>
-              ))}
+              </div>
             </div>
 
             {/* Right: Stats */}
