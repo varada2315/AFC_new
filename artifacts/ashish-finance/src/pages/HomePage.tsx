@@ -3,7 +3,6 @@ import { motion, useInView } from "framer-motion";
 import { Play, Camera, Users, Banknote } from "lucide-react";
 import { SiWhatsapp, SiInstagram, SiFacebook } from "react-icons/si";
 import { SectionTitle } from "@/components/SectionTitle";
-import ashishHeroPath from "@assets/ashish-hero.png";
 import growthPhotoPath from "@assets/growth-photo.png";
 import visit1Path from "@assets/visit-1.png";
 import visit2Path from "@assets/visit-2.png";
@@ -92,16 +91,20 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex-1 w-full lg:max-w-[45%] relative"
             >
-              <div className="relative aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl shadow-black/50">
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2A] via-transparent to-transparent z-10"></div>
-                <img 
-                  src={ashishHeroPath} 
-                  alt="Mr. Ashish Vilas Urkude" 
-                  className="w-full h-full object-cover"
-                />
-                {/* Decorative Elements */}
-                <div className="absolute top-4 left-4 border-l-2 border-t-2 border-primary w-12 h-12 z-20"></div>
-                <div className="absolute bottom-4 right-4 border-r-2 border-b-2 border-primary w-12 h-12 z-20"></div>
+              <div className="relative max-w-md mx-auto mt-8 lg:mt-0">
+                {/* Frame wrapper preserving photo's layout */}
+                <div className="relative p-2 lg:p-3 border-4 border-primary/20 rounded-[2rem] shadow-2xl shadow-black/50">
+                  <div className="relative rounded-[1.5rem] overflow-hidden bg-[#0D1B2A] border border-white/5">
+                    <img 
+                      src="/asheieimage.jpg" 
+                      alt="Mr. Ashish Vilas Urkude" 
+                      className="w-full h-auto object-contain block"
+                    />
+                  </div>
+                  {/* Decorative Elements on the frame */}
+                  <div className="absolute -top-1 -left-1 border-t-4 border-l-4 border-primary w-16 h-16 rounded-tl-[2rem] z-20"></div>
+                  <div className="absolute -bottom-1 -right-1 border-b-4 border-r-4 border-primary w-16 h-16 rounded-br-[2rem] z-20"></div>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -195,7 +198,7 @@ export default function HomePage() {
               className="relative aspect-square rounded-2xl overflow-hidden border border-primary/30 p-2 bg-white"
             >
               <div className="w-full h-full rounded-xl overflow-hidden">
-                <img src={growthPhotoPath} alt="Financial Growth" className="w-full h-full object-cover" />
+                <img src="/asheieimage.jpg" alt="Mr. Ashish Vilas Urkude" className="w-full h-full object-cover" />
               </div>
             </motion.div>
 

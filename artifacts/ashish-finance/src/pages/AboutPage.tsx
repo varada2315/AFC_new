@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Target, TrendingUp, ShieldCheck, BookOpen } from "lucide-react";
-import ashishHeroPath from "@assets/ashish-hero.png";
+
 
 export default function AboutPage() {
   return (
@@ -31,7 +31,7 @@ export default function AboutPage() {
               className="flex-1 w-full"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-square max-w-md mx-auto lg:mx-0">
-                <img src={ashishHeroPath} alt="Mr. Ashish Vilas Urkude" className="w-full h-full object-cover" />
+                <img src="/asheieimage.jpg" alt="Mr. Ashish Vilas Urkude" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl pointer-events-none"></div>
               </div>
             </motion.div>
