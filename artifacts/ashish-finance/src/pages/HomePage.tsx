@@ -3,7 +3,6 @@ import { motion, useInView } from "framer-motion";
 import { Play, Camera, Users, Banknote } from "lucide-react";
 import { SiWhatsapp, SiInstagram, SiFacebook } from "react-icons/si";
 import { SectionTitle } from "@/components/SectionTitle";
-import growthPhotoPath from "@assets/growth-photo.png";
 import visit1Path from "@assets/visit-1.png";
 import visit2Path from "@assets/visit-2.png";
 import visit3Path from "@assets/visit-3.png";
@@ -198,7 +197,7 @@ export default function HomePage() {
               className="relative aspect-square rounded-2xl overflow-hidden border border-primary/30 p-2 bg-white"
             >
               <div className="w-full h-full rounded-xl overflow-hidden">
-                <img src="/asheieimage.jpg" alt="Mr. Ashish Vilas Urkude" className="w-full h-full object-cover" />
+                <img src="/moineygro.jpeg" alt="Wealth Growth" className="w-full h-full object-cover" />
               </div>
             </motion.div>
 
